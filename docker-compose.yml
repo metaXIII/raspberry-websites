@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: game
+      MYSQL_PASSWORD: password
+      MYSQL_USER: user
+    ports:
+      - '33306:3306'
+    volumes:
+      - ./resources/data:/docker-entrypoint-initdb.d/
+  web:
+    container_name: raspberry-website
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
