@@ -26,7 +26,9 @@ h5 {
 }
 
 .main {
-    max-width: 1650px;
+    max-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
     padding: 0 5%;
 }
 
@@ -67,16 +69,18 @@ footer {
 }
 
 .card {
+    min-width: 18rem;
+    min-height: 280px;
     width: 18rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
+    margin: 2rem;
 }
 
 .card-body {
@@ -116,6 +120,8 @@ footer {
 
 
 .navbar {
+    max-width: 1200px;
+    margin: auto;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -138,5 +144,30 @@ footer {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.btn-position-right-bottom {
+    bottom: 10px;
+    right: 10px;
+}
+
+.text-color-white {
     color: #fff;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
 }
