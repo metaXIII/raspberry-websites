@@ -11,7 +11,7 @@
     <body>
         <header class="bg-dark">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand text-color-white" href="/">Navbar</a>
+                <a class="navbar-brand text-color-white" href="/">Accueil</a>
             </nav>
         </header>
         <main class="main">
@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Mes jeux</h5>
                         <p class="card-text">Bibliothèque de jeux vidéos</p>
-                        <a href="" class="btn btn-primary absolute btn-position-right-bottom">Aller sur le site</a>
+                        <a href="./game-manager/index" class="btn btn-primary absolute btn-position-right-bottom">Aller sur le site</a>
                     </div>
                 </div>
             </div>
