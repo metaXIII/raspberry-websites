@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="public/css/index.css"/>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -11,7 +12,7 @@
     <body>
         <header class="bg-dark">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand text-color-white" href="/">Accueil</a>
+                <a class="navbar-brand text-white" href="/">Accueil</a>
             </nav>
         </header>
         <main class="main">
@@ -20,7 +21,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Mes jeux</h5>
                         <p class="card-text">Bibliothèque de jeux vidéos</p>
-                        <a href="./game-manager/index" class="btn btn-primary absolute btn-position-right-bottom">Aller sur le site</a>
+                        <a href="./game-manager" class="btn btn-primary absolute btn-position-right-bottom">Aller sur le site</a>
                     </div>
                 </div>
             </div>

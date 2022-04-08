@@ -27,9 +27,8 @@ h5 {
 
 .main {
     max-width: 1200px;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 5%;
 }
 
 footer {
@@ -42,15 +41,11 @@ footer {
     max-height: 50px;
 }
 
-.dark-background {
-    background: #24292F;
-    color: #fff;
-}
-
 .container {
     max-width: 1200px;
     margin: 2% auto;
 }
+
 
 .text-right {
     text-align: right;
@@ -123,11 +118,9 @@ footer {
     max-width: 1200px;
     margin: auto;
     position: relative;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.5rem 1rem;
 }
@@ -170,4 +163,31 @@ footer {
 .footer {
     max-width: 1200px;
     margin: auto;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.navbar-nav li {
+    margin: 5px 0;
+}
+
+.nav-item {
+    color: #F8F9FA;
+}
+
+.active {
+    color: #fff;
+}
+
+
+@media screen and (min-width: 768px) {
+    .main {
+        padding: 0 5%;
+    }
 }
