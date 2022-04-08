@@ -10,4 +10,10 @@
         public function getStatistics();
 
         public function save(array $post);
+
+        public function play();
+
+        public function end($id);
+
+        public function abandonned($id);
     }
