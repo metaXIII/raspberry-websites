@@ -1,7 +1,11 @@
 <?php
+
+    use impl\ConsoleServiceImpl;
+
     include "view/include/header.php";
     $game = $game ?? null;
     $stats = $stats ?? null;
+    $consoleService = new ConsoleServiceImpl();
 ?>
 
 <div class="container table-responsive-md">
@@ -21,12 +25,12 @@
                 if ($game):
                     ?>
                     <tr>
-                        <th scope="row">{{jeux.id}}</th>
-                        <td>{{jeux.name}}</td>
-                        <td>{{jeux.console.name}}</td>
+                        <th scope="row"><?= $game->getIdGame() ?></th>
+                        <td><?= $game->getName() ?></td>
+                        <td><?= $consoleService->findById($game->getIdConsole())->getName() ?> </td>
                         <td>
-                            <button class="btn btn-success">Indiquer le jeu comme terminé</button>
-                            <button class="btn btn-danger">Abandonner le jeu</button>
+                            <a class="btn btn-success" href="end/<?= $game->getIdGame() ?>">Indiquer le jeu comme terminé</a>
+                            <a class="btn btn-danger" href="abandonned/<?= $game->getIdGame() ?>" >Abandonner le jeu</a>
                         </td>
                     </tr>
                 <?php

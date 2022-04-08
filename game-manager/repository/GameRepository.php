@@ -51,4 +51,26 @@
             $query->bindValue(":console", $this->consoleService->findByName($gameDTO->getConsole())->getIdConsole());
             $query->execute();
         }
+
+        public function findAllByStatus(int $status) {
+            $req = "select * from game where status = :status";
+            $query = $this->database->prepare($req);
+            $query->execute([":status" => $status]);
+            return $query->fetchAll(PDO::FETCH_CLASS, Game::class);
+        }
+
+        public function update(Game $random) {
+            $req = "update game set status = 2 where id_game = " . $random->getIdGame();
+            $this->database->query($req)->execute();
+        }
+
+        public function end(int $id) {
+            $req = "update game set status = 3 where id_game = " . $id;
+            $this->database->query($req)->execute();
+        }
+
+        public function abandonned(int $id) {
+            $req = "update game set status = 4 where id_game = " . $id;
+            $this->database->query($req)->execute();
+        }
     }

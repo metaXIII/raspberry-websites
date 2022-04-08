@@ -53,6 +53,17 @@
                 include "view/list.php";
             });
             $router->get("new", function () {
+                $this->gameService->play();
+                header("location:" . WEBROOT);
+                die();
+            });
+            $router->get("end/:id", function ($id) {
+                $this->gameService->end($id);
+                header("location:" . WEBROOT);
+                die();
+            });
+            $router->get("abandonned/:id", function ($id) {
+                $this->gameService->abandonned($id);
                 header("location:" . WEBROOT);
                 die();
             });
