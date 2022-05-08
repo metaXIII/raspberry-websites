@@ -39,10 +39,14 @@
         }
 
         public function play() {
-            if (!$this->gameRepository->findByStatus(Status::IN_PROGRESS->getStatus())) {
+            $exist = $this->gameRepository->findByStatus(Status::IN_PROGRESS->getStatus());
+            if (!$exist) {
                 $total = $this->gameRepository->findAllByStatus(Status::NOT_STARTED->getStatus());
                 $random = rand(1, sizeof($total));
                 $this->gameRepository->update($total[$random]);
+            } else {
+                $this->gameRepository->reroll();
+                $this->play();
             }
         }
 
