@@ -64,6 +64,11 @@
             $this->database->query($req)->execute();
         }
 
+        public function reroll() {
+            $req = "update game set status = 1 where status = 2";
+            $this->database->query($req)->execute();
+        }
+
         public function end(int $id) {
             $req = "update game set status = 3 where id_game = " . $id;
             $this->database->query($req)->execute();
