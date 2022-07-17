@@ -20,9 +20,9 @@ pipeline {
                 cleanup {
                     script {
                         if (isUnix()) {
-                            sh "docker compose -f down"
+                            sh "docker compose down"
                         } else {
-                            bat "docker compose -f down"
+                            bat "docker compose down"
                         }
                     }
                 }
