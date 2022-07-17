@@ -19,4 +19,4 @@ jobs:
 
       - name: stop container
         if: always()
-        run: docker-compose -f down
+        run: docker compose down
