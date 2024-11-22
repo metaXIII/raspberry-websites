@@ -1,8 +1,7 @@
 FROM php:8.4.0RC4-apache
 
-RUN a2enmod rewrite
-RUN docker-php-ext-install pdo pdo_mysql
+RUN a2enmod rewrite && \
+    docker-php-ext-install pdo pdo_mysql
 
-ADD . /var/www/html
-
+COPY . /var/www/html
 EXPOSE 80
