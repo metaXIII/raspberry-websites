@@ -1,4 +1,4 @@
-FROM php:8.4.0RC4-apache
+FROM php:8.4.5-apache
 
 RUN a2enmod rewrite && \
     docker-php-ext-install pdo pdo_mysql
